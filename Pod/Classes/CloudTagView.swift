@@ -271,7 +271,7 @@ extension CloudTagView : TagViewDelegate {
         delegate?.tagDismissed?(tag)
         
         if removeOnDismiss {
-            if let index = tags.index(of: tag) {
+            if let index = tags.firstIndex(of: tag) {
                 tags.remove(at: index)
             }
         }
